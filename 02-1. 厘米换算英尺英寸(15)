@@ -29,3 +29,22 @@ int main()
     return 0;
 }
 这个中间的计算步骤没捋清，一会再说。
+
+#include <stdio.h>
+
+int main( ) {
+    int cm;
+    scanf("%d", &cm);
+    
+    int foot, inch; 
+    foot = cm / 30.48;       #这里要注意直接除30.48，不能先除100再除0.3048，那样第一步就给取整了
+    inch = ( cm / 30.48 - foot)  * 12; #这一步就是在计算inch，类似于把3.4m换算成3m+40dm，题目中所说的12就是只英尺和英寸换算是12进制
+    
+    
+    printf("%d %d", foot, inch); 
+   
+
+
+        return 0;
+}
+
