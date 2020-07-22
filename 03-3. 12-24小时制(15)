@@ -29,3 +29,15 @@ int main( ) {
     
         return 0;
 }
+
+
+这个是整个想的有点不细了
+if (hour >= 0 && hour <12){
+   printf("%d:%d AM, hour, minute);
+} else if( hour == 12 ){
+   printf("%d:%d PM", hour, minute);
+} else if(hour == 24){
+   printf("%d:%d AM", hour-24, minute);
+} else {
+   printf("%d:%d PM", hour-12, minute);
+}
